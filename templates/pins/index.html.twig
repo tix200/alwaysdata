@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title  'liste Pin' %}
+
+{% block body %}
+    <h1> {{pine|length}} PINS </h1>
+    
+    {% for listepin in pine %}
+        <article>
+            <h2> <a href="#"> {{ listepin.title }} </a> </h2>
+            <p> {{ listepin.description }} </p>
+        </article>
+    {% endfor %}
+{% endblock %}
